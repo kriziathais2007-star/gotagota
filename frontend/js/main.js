@@ -1,3 +1,8 @@
+// EVENTOS DE JAVASCRIPT (CLICK, CARGAR, KEY)
 document.addEventListener("DOMContentLoaded", () => {
-    alert("JONAS")
+    fetch('http://localhost:8080/api/clientes')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Datos:', data);
+        })
 });
