@@ -4,5 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             console.log('Datos:', data);
+            const elemento = document.getElementById("tabla-cliente")
+            data.forEach(c => elemento.innerHTML += `<tr><td>${c.id}</td><td>${c.nombre}</td></tr>`);
+            console.log(elemento)
         })
 });
