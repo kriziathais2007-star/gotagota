@@ -6,9 +6,22 @@ document.addEventListener("DOMContentLoaded", () => {
             //<tbody id="table-cliente"></tbody>
             const elemento = document.getElementById("table-cliente")
 
-           for (let i = 0; 1 < data.length; i++) {
-            console.log(data[i]) //muestro en la consola
-
+           for (let i = 0; i < data.length; i++) {
+            //data(i), muestra en forma de array
+            let cliente = data[i]
+            let fila = `
+                         <tr>
+                         <td>${cliente.id}</td>
+                         <td>${cliente.nombre}</td>
+                         <td>${cliente.apellido}</td>
+                         <td>${cliente.dni}</td>
+                         <td>${cliente.telefono}</td>
+                         <td>${cliente.direccion}</td>
+                         </tr>
+                       `
+            elemento.innerHTML += fila
+            //muestra los resultados en la consola
+            console.log(cliente)
            }
-})
+     })
 });

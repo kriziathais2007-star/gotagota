@@ -7,15 +7,15 @@
 }
 
 :root {
-    --bg: #f5f5f5;
+    --bg: #f5f4f5;
     --text: #1a1a1a;
     --sidebar-w: 220px;
-    --sidebar-bg: #ffffff;
+    --sidebar-bg: #e69cec;
     --sidebar-line: rgba(0, 0, 0, 0.1);
-    --muted: #999;
+    --muted: #5e5d5f;
     --accent: #4f46e5;
     --topbar-h: 56px;
-    --danger: #e74c3c;
+    --danger: #e92813;
 }
 
 body {
@@ -180,7 +180,7 @@ main {
 }
 
 .main-content {
-    background: #fff;
+    background: #e7e3e3;
     border-radius: 12px;
     padding: 24px;
     border: 1px solid var(--sidebar-line);
