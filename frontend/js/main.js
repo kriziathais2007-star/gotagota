@@ -10,26 +10,45 @@ document.addEventListener("DOMContentLoaded", () => {
         let cliente = data[i];
         // alt + 96
         let fila = `
-                            <tr>
-                            <td>${cliente.id}</td>
-                            <td>${cliente.nombre}</td>
-                            <td>${cliente.apellido}</td>
-                            <td>${cliente.dni}</td>
-                            <td>${cliente.telefono}</td>
-                            <td>${cliente.direccion}</td>
-                            <td> 
-                                <button class="btn btn-outline-primary me-2">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                                <button class="btn btn-outline-danger">
-                                    <i class="fas fa-trash"></i> Eliminar
-                                </button>
-                            </td>
-                            </tr>                
+        <tr>
+            <td>${cliente.id}</td>
+            <td>${cliente.nombre}</td>
+            <td>${cliente.apellido}</td>
+            <td>${cliente.dni}</td>
+            <td>${cliente.telefono}</td>
+            <td>${cliente.direccion}</td>
+            <td> 
+                <button class="btn btn-outline-primary me-2">
+                    <i class="fas fa-edit"></i> Editar
+                </button>
+                <button id="btnEliminar" data-idcliente = ${cliente.id} class="btn btn-outline-danger" )>
+                    <i class="fas fa-trash"></i> Eliminar
+                </button>
+            </td>
+        </tr>                
                            `;
         elemento.innerHTML += fila;
 
         //console.log(cliente) //Muestro los resultados en consola
       }
     });
+});
+
+//evento de click
+document.addEventListener("click", function (e){
+    const btnDelete = e.target.closest("#btnEliminar")
+    if (btnDelete) {
+        alert("Eliminando.....");
+        const id = btnDelete.dataset.idcliente;
+        fetch(`http://localhost:8080/api/clientes/${id}` , {
+            method: 'DELETE'
+        })
+        .then(response => {
+            if(response.ok) {
+                alert('Cliente eliminado correctamente');
+                this.location.reload();
+            } else {
+                alert('Error al eliminar cliente');
+         }})
+    }
 });
