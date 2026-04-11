@@ -27,7 +27,7 @@ public class ClienteController {
     public List<Cliente> listar() {return clienteService.listarTodos();}
 
     //DELETE /api/clientes/{id} --> delete un cliente por su id
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/id")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         clienteService.eliminarCliente(id);
         return ResponseEntity.noContent().build();
