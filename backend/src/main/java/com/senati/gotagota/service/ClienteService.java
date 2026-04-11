@@ -19,4 +19,9 @@ public class ClienteService {
     public List<Cliente> listarTodos(){
         return clienteRepository.findAll();
     }
+
+    //elimina el cliente por id
+    public void eliminarCliente(long id) {
+        clienteRepository.deleteById(id);
+    }
 }
