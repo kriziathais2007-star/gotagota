@@ -7,12 +7,12 @@
 }
 
 :root {
-    --bg: #f5f4f5;
-    --text: #1a1a1a;
+    --bg: #bb53bb;
+    --text: #ffffff;
     --sidebar-w: 220px;
-    --sidebar-bg: #e69cec;
-    --sidebar-line: rgba(0, 0, 0, 0.1);
-    --muted: #5e5d5f;
+    --sidebar-bg: #e9b3ee;
+    --sidebar-line: rgba(255, 251, 251, 0.1);
+    --muted: #919194;
     --accent: #4f46e5;
     --topbar-h: 56px;
     --danger: #e92813;
@@ -81,7 +81,7 @@ body {
     left: -100%;
     width: var(--sidebar-w);
     height: 100vh;
-    background-color: var(--sidebar-bg);
+    background: url(../image/fondo.jpg);
     border-right: 1px solid var(--sidebar-line);
     display: flex;
     flex-direction: column;
@@ -140,7 +140,7 @@ body {
 }
 
 .sidebar ul li a.activo {
-    background-color: #eeeeee;
+    background-color: #ad33cc;
     color: var(--text);
     font-weight: 600;
 }
@@ -164,6 +164,7 @@ main {
     margin-top: var(--topbar-h);
     padding: 28px 24px;
     min-height: 100vh;
+    background-color: #e9b3ee;
 }
 
 .breadcrumb {
