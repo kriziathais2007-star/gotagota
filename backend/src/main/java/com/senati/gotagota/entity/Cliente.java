@@ -15,17 +15,22 @@ public class Cliente {
     // nullable=false significa que este campo no puede estar vacio en la BD
     @Column(nullable = false)
     private String nombre;
+
     @Column(nullable = false)
     private String apellido;
+
     //unique=true significa que no puede haber dos clientes con el mismo DNI
     //length=8 significa limita el campo a 8 caracteres
     @Column(nullable = false,unique = true,length = 8)
     private String dni;
+
     //Sin anotaciones ( @ ) extra: columna normal, puede ser nula
     private String telefono;
     private String direccion;
 
     //GETTER a SETTERS
+
+    //GET & SET
 
     public Long getId() {
         return id;
