@@ -90,6 +90,49 @@
             </div>
         </div>
     </main>
+<!-- Modal Registro de cliente-->
+<div class="modal fade" id="modalRegistroCliente" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresar Datos del Cliente</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="p-4 border rounded bg-light">
+  <div class="mb-3">
+    <label for="" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="c_nombre" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Apellido</label>
+    <input type="text" class="form-control" id="c_apellido" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">DNI</label>
+    <input type="text" class="form-control" id="c_dni" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Teléfono</label>
+    <input type="tel" class="form-control" id="c_telefono" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="c_direccion" required>
+  </div>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btn-crearcliente">Guardas Cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <script src="js/main.js"></script>
     <script src="js/sidebar.js"></script>
