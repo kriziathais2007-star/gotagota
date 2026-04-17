@@ -28,6 +28,10 @@ public class ClienteService {
     public void eliminarCliente(Long id) {
         clienteRepository.deleteById(id);
     };
+<<<<<<< HEAD
 
 
 }
+=======
+}
+>>>>>>> 2665bf49e39ffa7645b597dc8ef945da7c9c8d8f
